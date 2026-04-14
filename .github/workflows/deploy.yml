@@ -14,33 +14,9 @@ jobs:
       - name: Deploy to Server
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: "13.51.196.155"
-          username: "ec2-user"
-          key: "MIIEpAIBAAKCAQEA3GAB8tOlNnU8b85DyzsI4dAymtK7sAf7UKK/ZLI/iB8sV44H
-                +E8/1WNz/c72L9qjb9PW1KeVgrGTH8MuPz883IOveHMdC/VlyXp/8GBAOoRNxqIr
-                yh5lgq4vWrvvw31WaqqvQk/pf8eZLHHvMmqebePd4CchN2gKjAxVCy9WAzl+o85h
-                a6EQOea8uefmfgbiKl4otZyk647NjC70rw7ON4ZJeRUGyaGpZ1nch8DgNat4M+YH
-                ldGG4BIaPaDuxSJtVYc0Yjpas0hDrMJkV0YOlzaDFbmmI+zFtHmWxR3fbSMbLx5U
-                92TZ5hAg91sFOu9TOJd0UsmejNwPHkbyIqsq4QIDAQABAoIBAQDT3voAm7qbQNt6
-                IrTLD1baw2/jqfcIpqPYQqAAD99E37Oh+ctvz8FvRs6dlfzaxTmcqe5BRV1Y6aCp
-                SN2NsR6yY2iwRPwII0ZZDo0ybVdS6yBbeE7hY5f0q8KbWVSKflY29yLIfkvfreZ1
-                9JQjxJ3MyOboOraUrlJ1kuWwezIWpcd8LAK8wxu4KIfVE6G066+Gg+RUTMK8gVpD
-                8/9ZkU+YQXsgP2YR4GTFOM2I/JeA6E4dKG27BEMy6J0Vi8prq6plCIgcasOuIZVH
-                LVACRPRs8nRGiRbDifHGgQ4nwFROBvqvJSltCi94IHzT51brlxpJ7+OEGEjYf4ru
-                uMWoW1YBAoGBAPBHrYKU1dfu547M0q/z4BtoWaaEAlErOkLbtO3bxKlzsKd5KVO8
-                uBac2wEIJIm98SL7DqVPB2XDperYcys73RQkc5r84uHLeCYwV1v321govEzSjsPx
-                7oE5C78w1zcTbJNfRGXF5hr+B7RQNftqCjrR0RvXqqM2Srj6I0D2EAqlAoGBAOrK
-                88J1x1mYmT9bnT8V/lLXIZaCA0kuslH7LW8sJwCU9ar2tjzL4OZ/fJIpoSV2TGiz
-                voG56PNAY4oF+Le9UThcKisfcmKSXx47AolI1ssH/1e0a+b0XPZGska02dnT8k1Y
-                XjClpiePKuxgAmkKTf5k6cj+MYV55dUbrGKj9LaNAoGANg152/FNdekZkEdFci2j
-                kabU3B/AQbA+yAGS3xtcT15mNBaOlHbU1slsfvvs9EuVbnAZ6Fgx6tOrhHwy1FwA
-                LOLSWuBezbqvCbBARsEoR9nKGmIXmb7YD5vcp6L+Fza4ayK4SUjOre3Nn+OXcTp2
-                mKrQprnKejLhdmFXAusXyr0CgYEAiAGWYD+vgYP2yY+9L80CrGP4DeI0GxFUtE6G
-                jA6MbTbcc/NDr0X+eibBNz2sHjI/oqr0INtbSIU047//yhd9U+N3fdFShiz5sl5G
-                YtXxrlxsmhZmJrvImdRr8q9SPm8avZkBvrZF4EZ7e79Fxij08vbrwcUVVJc+/kpw
-                ehc1awUCgYAmKIVrEndbNbsd2qYbCaRbb9/aTxzATSmlGEkpNdx5s9wBF0SkKgNZ
-                tHr+A82bXz5b5ZZodbPCyxwvgJutbf3JraR2/QjZ7o1kbcz0S4GPA6UizohJ5C1Z
-                daht1O2xhijBzlWnyHHWDqoOLab5RglRx1jjQj+/cLAy0WnLZRJEOw=="
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             echo "Connected successfully"
             whoami
