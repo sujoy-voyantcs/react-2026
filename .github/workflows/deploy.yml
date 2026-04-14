@@ -18,9 +18,10 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            echo "Connected"
+            echo "Connected successfully"
             whoami
             pwd
+            ls
             export PATH=$PATH:/usr/local/bin:/usr/bin
 
             cd ~/react-2026
