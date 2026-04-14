@@ -14,8 +14,8 @@ jobs:
       - name: Deploy to Server
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
+          host: "13.51.196.155"
+          username: "ec2-user"
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             echo "Connected successfully"
