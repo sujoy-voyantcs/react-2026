@@ -28,7 +28,7 @@ jobs:
             if pm2 describe react-2026 > /dev/null 2>&1; then
               pm2 restart react-2026
             else
-              pm2 start "npm run dev -- --host 0.0.0.0" --name react-2026
+              pm2 start "serve -s dist -l 3000" --name react-2026
             fi
 
             pm2 save
