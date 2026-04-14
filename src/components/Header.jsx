@@ -39,7 +39,12 @@ function Header(){
                     <Col md={4}>
                         <h2 className="text-white mb-0"><img src={reactLogo} className="framework" alt="React logo" /> React logo</h2>
                     </Col>
-                    <Col md={8}>
+                     <Col md={5}>
+                     <ul>
+                        <li><a href="#">Home</a></li>
+                     </ul>
+                     </Col>
+                    <Col md={3}>
                         {isLoggedIn ? (
                             <Button
                             variant="danger"
