@@ -1,0 +1,38 @@
+name: Deploy App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build app
+        run: npm run build
+
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.16.171.237.14 }}
+          username: ${{ secrets.ec2-user }}
+          key: ${{ secrets.pem.pem }}
+          script: |
+            cd /var/www/react-2026
+            git pull origin main
+            npm install
+            npm run build
+            pm2 restart react-2026
