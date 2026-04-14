@@ -37,7 +37,7 @@ function Header(){
             <Container>
                 <Row>
                     <Col md={4}>
-                        <h2 className="text-white mb-0"><img src={reactLogo} className="framework" alt="React logo" /> React</h2>
+                        <h2 className="text-white mb-0"><img src={reactLogo} className="framework" alt="React logo" /> React logo</h2>
                     </Col>
                     <Col md={8}>
                         {isLoggedIn ? (
