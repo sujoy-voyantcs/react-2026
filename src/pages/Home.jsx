@@ -14,9 +14,7 @@ function Home(){
             </div>
             <div>
               <h2>Get started Project</h2>
-              <p>
-                Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-              </p>
+              <p>Edit <code>src/App.jsx</code> and save to test <code>HMR</code></p>
             </div>
           </section>
         </Container>
