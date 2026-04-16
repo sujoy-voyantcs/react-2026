@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import LoginModal from "./LoginModal";
 import { useNavigate } from "react-router-dom";
+import reactLogo from "../assets/react.svg";
 
 function Header(){
     const [show, setShow] = useState(false);
@@ -36,9 +37,16 @@ function Header(){
             <Container>
                 <Row>
                     <Col md={4}>
-                        <h2 className="text-white mb-0">Site Logo</h2>
+                        <h2 className="text-white mb-0"><img src={reactLogo} className="framework" alt="React logo" /> React logo</h2>
                     </Col>
-                    <Col md={8}>
+                     <Col md={5}>
+                     <ul className="d-flex gap-4">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                     </ul>
+                     </Col>
+                    <Col md={3}>
                         {isLoggedIn ? (
                             <Button
                             variant="danger"

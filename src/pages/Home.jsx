@@ -13,10 +13,8 @@ function Home(){
               <img src={viteLogo} className="vite" alt="Vite logo" />
             </div>
             <div>
-              <h1>Get started</h1>
-              <p>
-                Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-              </p>
+              <h2>Get started Project</h2>
+              <p>Edit <code>src/App.jsx</code> and save to test <code>HMR</code></p>
             </div>
           </section>
         </Container>
