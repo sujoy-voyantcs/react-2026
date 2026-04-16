@@ -40,7 +40,7 @@ function Header(){
                         <h2 className="text-white mb-0"><img src={reactLogo} className="framework" alt="React logo" /> React logo</h2>
                     </Col>
                      <Col md={5}>
-                     <ul>
+                     <ul className="d-flex gap-4">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Contact Us</a></li>
